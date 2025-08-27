@@ -2,132 +2,207 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modal Example</title>
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot-N-Modal Wizard</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-    <style>
-        /* Custom Modal Styles */
-        .bot-N-model .modal-content {
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
-            border: none;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        }
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
 
-        .bot-N-model h5 {
-            font-weight: 700;
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: #e60000;
-        }
+    /* Blur effect when modal is open */
+    body.modal-open #main-content {
+      filter: blur(6px);
+      transition: 0.3s ease-in-out;
+    }
 
-        .bot-N-model p {
-            font-size: 0.9rem;
-            color: #555;
-            margin-bottom: 20px;
-        }
+    /* Custom Modal Styles */
+    .bot-N-model .modal-content {
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      border: none;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
 
-        .bot-N-model .options {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
+    .bot-N-model h5 {
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #e60000;
+    }
 
-        .bot-N-model .option-btn {
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            padding: 12px;
-            background: #fff;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-        }
+    .bot-N-model p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
 
-        .bot-N-model .option-btn:hover,
-        .bot-N-model .option-btn.active {
-            border-color: #e60000;
-            background: #ffe6e6;
-            color: #e60000;
-            font-weight: 600;
-        }
+    .bot-N-model .options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
 
-        .bot-N-model .modal-footer {
-            justify-content: space-between;
-            border-top: none;
-        }
+    .bot-N-model .option-btn {
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      padding: 12px;
+      background: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
 
-        .bot-N-model .btn-back {
-            background: #ddd;
-            border-radius: 10px;
-            padding: 8px 20px;
-            font-weight: 600;
-            border: none;
-        }
+    .bot-N-model .option-btn:hover,
+    .bot-N-model .option-btn.active {
+      border-color: #e60000;
+      background: #ffe6e6;
+      color: #e60000;
+      font-weight: 600;
+    }
 
-        .bot-N-model .btn-next {
-            background: #e60000;
-            color: #fff;
-            border-radius: 10px;
-            padding: 8px 20px;
-            font-weight: 600;
-            border: none;
-        }
-    </style>
+    .bot-N-model .modal-footer {
+      justify-content: space-between;
+      border-top: none;
+    }
+
+    .bot-N-model .btn-back {
+      background: #ddd;
+      border-radius: 10px;
+      padding: 8px 20px;
+      font-weight: 600;
+      border: none;
+    }
+
+    .bot-N-model .btn-next {
+      background: #e60000;
+      color: #fff;
+      border-radius: 10px;
+      padding: 8px 20px;
+      font-weight: 600;
+      border: none;
+    }
+
+    /* Hide steps initially */
+    .step {
+      display: none;
+    }
+
+    .step.active {
+      display: block;
+    }
+  </style>
 </head>
 
 <body class="p-5">
-
+  <div id="main-content">
     <!-- Button Trigger -->
     <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#botNModal">
-        Get a Free Quote
+      Get a Free Quote
     </button>
+  </div>
 
-    <!-- Modal -->
-    <div class="modal fade bot-N-model" id="botNModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
+  <!-- Modal -->
+  <div class="modal fade bot-N-model" id="botNModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
 
-                <!-- Modal Body -->
-                <div class="modal-body">
-                    <h5>What do you need?</h5>
-                    <p>SELECT ALL THAT APPLY</p>
+        <!-- Step 1 -->
+        <div class="modal-body step step-1 active">
+          <h5>What do you need?</h5>
+          <p>SELECT ALL THAT APPLY</p>
 
-                    <div class="options">
-                        <div class="option-btn">Digital Marketing</div>
-                        <div class="option-btn">Product Shoot</div>
-                        <div class="option-btn">Drone Videography</div>
-                        <div class="option-btn">Website Development</div>
-                    </div>
-                </div>
-
-                <!-- Modal Footer -->
-                <div class="modal-footer">
-                    <button class="btn-back" data-bs-dismiss="modal"><i class="fa-solid fa-arrow-left"></i>
-                        Back</button>
-                    <button class="btn-next">Next <i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
+          <div class="options">
+            <div class="option-btn">Digital Marketing</div>
+            <div class="option-btn">Product Shoot</div>
+            <div class="option-btn">Drone Videography</div>
+            <div class="option-btn">Website Development</div>
+          </div>
         </div>
+
+        <!-- Step 2 -->
+        <div class="modal-body step step-2">
+          <h5>Tell us about your goals.</h5>
+          <p>WE’RE ALWAYS UP FOR A CHALLENGE</p>
+          <textarea class="form-control" rows="4" placeholder="Type here..."></textarea>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="modal-body step step-3">
+          <h5>Final Step</h5>
+          <p>Almost done! Enter your contact details.</p>
+          <input type="text" class="form-control mb-2" placeholder="Your Name">
+          <input type="email" class="form-control mb-2" placeholder="Your Email">
+          <input type="tel" class="form-control" placeholder="Your Phone">
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button class="btn-back"><i class="fa-solid fa-arrow-left"></i> Back</button>
+          <button class="btn-next">Next <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-        // Toggle active state on option buttons
-        document.querySelectorAll(".option-btn").forEach(btn => {
-            btn.addEventListener("click", () => {
-                btn.classList.toggle("active");
-            });
-        });
-    </script>
+  <script>
+    // Toggle active state on option buttons
+    document.querySelectorAll(".option-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("active");
+      });
+    });
 
+    // Modal Step Navigation
+    let currentStep = 1;
+    const steps = document.querySelectorAll(".step");
+    const nextBtn = document.querySelector(".btn-next");
+    const backBtn = document.querySelector(".btn-back");
+
+    function showStep(step) {
+      steps.forEach((s, i) => {
+        s.classList.toggle("active", i === step - 1);
+      });
+
+      // Hide back button on first step
+      backBtn.style.display = step === 1 ? "none" : "inline-block";
+
+      // Change "Next" to "Finish" on last step
+      nextBtn.innerHTML = step === steps.length
+        ? "Finish <i class='fa-solid fa-check'></i>"
+        : "Next <i class='fa-solid fa-arrow-right'></i>";
+    }
+
+    nextBtn.addEventListener("click", () => {
+      if (currentStep < steps.length) {
+        currentStep++;
+        showStep(currentStep);
+      } else {
+        // Close modal on Finish
+        const modal = bootstrap.Modal.getInstance(document.getElementById('botNModal'));
+        modal.hide();
+      }
+    });
+
+    backBtn.addEventListener("click", () => {
+      if (currentStep > 1) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    });
+
+    // Initialize modal
+    showStep(currentStep);
+  </script>
 </body>
 
 </html>

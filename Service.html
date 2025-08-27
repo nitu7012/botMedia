@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot-N Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    /* ==== Reset & Overflow Fix ==== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      overflow-x: hidden; /* prevent horizontal scroll */
+    }
+   .top-serv-n-hero {
+        padding: 40px 0 30px 0;
+      background: linear-gradient(135deg, #ea9693, #3403032b);
+      border-radius: 15px;
+    }
+
+    /* ==== Hero Section Buttons ==== */
+    .bot-n-services-btn button {
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .bot-n-services-btn .primaary-btn {
+      background-color: #e31515ee;
+      color: #fff;
+      border: none;
+    }
+
+    .bot-n-services-btn .primaary-btn:hover {
+      background-color: #c40f0f;
+    }
+
+    .bot-n-services-btn .secondry-btn {
+      border: 1.5px solid #000;
+      color: #000;
+      background-color: transparent;
+    }
+
+    .bot-n-services-btn .secondry-btn:hover {
+      background-color: #f2f2f2;
+    }
+
+    /* ==== Hero Section Layout ==== */
+    #top-service-heading {
+      padding: 60px 0;
+    }
+
+    .top-serv-N-left-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      padding-left: 20px;
+    }
+
+    .top-serv-N-left-text h3 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .top-serv-N-left-text p {
+      margin-bottom: 25px;
+      color: #333;
+      line-height: 1.6;
+      font-size: 1.05rem;
+    }
+
+    .top-right-serv-img-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .top-right-serv-img-wrapper img {
+      max-height: 300px;
+      max-width: 90%;
+    }
+
+    /* ==== Services Section ==== */
+    .bot-N-service {
+      padding: 40px 0;
+    }
+
+    .bot-N-service-label {
+      font-weight: 600;
+      color: #e31515;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+      font-size: 18px;
+      margin-bottom: 10px;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .bot-N-service h2 {
+      font-weight: 700;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      text-align: center;
+      color: #222;
+      padding: 0 120px;
+    }
+
+    /* ==== Service Card ==== */
+    .bot-N-service-card {
+      background: #fff;
+      border: 2px solid #ddd;
+      border-radius: 12px;
+      padding: 18px;
+      transition: 0.3s;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .bot-N-service-card:hover {
+      box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+      border-color: #e31515;
+      cursor: pointer;
+    }
+
+    .bot-N-service-card img {
+      border-radius: 10px;
+      margin-bottom: 15px;
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+    }
+
+    .bot-N-service-card h5 {
+      font-weight: 700;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .bot-N-service-card p {
+      font-size: 0.9rem;
+      color: #525151;
+      margin-bottom: 15px;
+    }
+
+    .btn-card {
+      padding: 10px 25px;
+      background-color: #FF3030;
+      width: fit-content;
+      border: none;
+      border-radius: 50px;
+      color: #fff;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-card:hover {
+      background: #c62828;
+    }
+
+    .bot-N-right-arrow {
+      margin-left: 8px;
+    }
+
+    /* ==== Responsive ==== */
+    @media (max-width: 768px) {
+      #top-service-heading {
+        padding: 40px 0;
+      }
+
+      .top-serv-N-left-text h3 {
+        font-size: 1.6rem;
+      }
+
+      .top-serv-N-left-text p {
+        font-size: 0.95rem;
+      }
+
+      /* Buttons ek hi row me rahenge */
+      .bot-n-services-btn {
+        flex-wrap: nowrap !important;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .bot-n-services-btn button {
+        font-size: 0.85rem;
+        padding: 10px 18px;
+      }
+
+      .bot-N-service h2 {
+        font-size: 1.3rem;
+        padding: 0 10px;
+      }
+
+      /* Hero image mobile me hide */
+      .top-right-serv-img-wrapper {
+        display: none !important;
+      }
+
+      .bot-N-service-card img {
+        height: 150px;
+      }
+
+      .btn-card {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Hero Section -->
+  <div id="top-service-heading">
+    <div class="top-serviece-wrapper">
+      <div class="container">
+        <div class="row align-items-center top-serv-n-hero ">
+          <!-- Left Text -->
+          <div class="col-md-6">
+            <div class="top-serv-N-left-text">
+              <h3>Transform Your Brand with ROI-Driven Digital Services</h3>
+              <p>Bot Media Digital delivers websites, SEO, and paid campaigns that convert. Transparent
+                process. Fast
+                turnaround. Proven results.</p>
+              <div class="bot-n-services-btn d-flex gap-3">
+                <button class="primaary-btn">
+                  Get a Free Strategy Call <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button class="secondry-btn">
+                  See Our Work <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Right Image -->
+          <div class="col-md-6">
+            <div class="top-right-serv-img-wrapper">
+              <img src="./assets/img/serv-left-img.svg" alt="Service Image" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <section class="bot-N-service">
+    <div class="container">
+      <!-- Header -->
+      <div class="bot-N-service-label">
+        <span><img src="./assets/img/common-hed-d.svg" alt="" height="24px"> Grow With Our Services</span>
+      </div>
+      <h2>One stop for all your digital growth—creative, technical, and marketing services under one roof.</h2>
+
+      <!-- Cards -->
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="bot-N-service-card">
+            <img src="./assets/img/why1.jpg" alt="Web Development">
+            <h5>Web Development</h5>
+            <p><em>We create stunning and user-friendly websites tailored to your business.</em></p>
+            <p>We create scroll-stopping social media campaigns that drive engagement and build trust.</p>
+            <button class="btn-card">Request a Quote
+              <span class="bot-N-right-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="bot-N-service-card">
+            <img src="./assets/img/why2.jpg" alt="Aerial Photography">
+            <h5>Aerial Photography</h5>
+            <p><em>Capture your property or product with cinematic drone shots.</em></p>
+            <p>Professional aerial photography for real estate, events, and campaigns.</p>
+            <button class="btn-card">Hire Photographer
+              <span class="bot-N-right-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="bot-N-service-card">
+            <img src="./assets/img/why4.jpg" alt="Digital Marketing">
+            <h5>Digital Marketing</h5>
+            <p><em>Grow your brand online with SEO, PPC, and social media.</em></p>
+            <p>SEO, PPC, social media management, and lead generation strategies.</p>
+            <button class="btn-card">Start Marketing
+              <span class="bot-N-right-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
