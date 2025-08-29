@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot-N-Alll-Head</title>
+  <link rel="stylesheet" href="../assets/style/style.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* Background section */
+    .bot-N-alll-head {
+      position: relative;
+      height: 30vh;
+      background: url("../assets/img/why1.jpg") no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Overlay */
+    .bot-N-alll-head::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    /* Content above overlay */
+    .bot-N-alll-head .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .bot-N-alll-head .nav-links a {
+      font-size: 1rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .bot-N-alll-head .nav-links a:hover {
+      color: #EC2A23;
+    }
+
+
+    /* end top heaidng */
+    /* Main Section */
+    .bot-N-aboutmain {
+      background-color: #fff;
+      color: #333;
+      padding: 60px 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .bot-N-aboutmain h2 {
+      font-size: 42px;
+      font-weight: bold;
+      color: #ff2c2c;
+    }
+
+    .bot-N-aboutmain .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ff2c2c;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .bot-N-aboutmain .stats h3 {
+      color: #ff2c2c;
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    .bot-N-aboutmain .stats p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .bot-N-aboutmain .feature-box h5 {
+      color: #ff2c2c;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .bot-N-aboutmain .feature-box p {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .bot-N-aboutmain .project-info {
+      margin-top: 40px;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    .bot-N-aboutmain .project-info h3 {
+      color: #ff2c2c;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .bot-N-aboutmain .project-info p {
+      font-size: 14px;
+      color: #444;
+    }
+
+    .bot-N-aboutmain .team-avatars {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .bot-N-aboutmain .team-avatars img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+      margin-left: -10px;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .bot-N-aboutmain .team-avatars img:first-child {
+      margin-left: 0;
+    }
+
+    .bot-N-aboutmain .team-avatars img:hover {
+      transform: scale(1.1);
+      z-index: 2;
+    }
+
+    .bot-N-aboutmain .team-avatars .play-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #ff2c2c;
+      color: #fff;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .bot-N-about-top-left-hed span {
+      color: #555;
+      font-size: 26px;
+      font-weight: 600;
+      margin-left: 8px;
+    }
+
+    .bot-N-about-top-left-hed h3 {
+      color: #222;
+      font-weight: 700;
+      margin-top: 15px;
+      font-size: 26px;
+      line-height: 1.4;
+    }
+
+    .bot-n-des {
+      color: #444;
+      font-size: 16px;
+      margin-top: 15px;
+      line-height: 1.7;
+    }
+
+    .bot-n-des span {
+      font-weight: 700;
+      color: #ff2c2c;
+    }
+
+    /* Highlighted main heading */
+    .main-head-about {
+      font-weight: 900;
+      font-size: 36px;
+      /* बड़ा किया */
+      line-height: 1.3;
+      background: linear-gradient(90deg, #ff2c2c, #b30000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Heading + description block */
+    .bot-n-head-about {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .bot-n-head-about .icon {
+      color: #b30000;
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    .bot-n-head-about .content h5 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 16px;
+      color: #2d1a1a;
+    }
+
+    .bot-n-head-about .content p {
+      margin: 0;
+      font-size: 14px;
+      color: #7a6a6a;
+    }
+
+    /* Equal height wrapper */
+    .about-content-box {
+      display: flex;
+      align-items: stretch;
+      gap: 20px;
+    }
+
+    .about-content-box .left-img,
+    .about-content-box .right-text {
+      flex: 1;
+    }
+
+    .about-content-box .right-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* ✅ Mobile Responsive Update */
+    @media (max-width: 768px) {
+
+      /* Title section stack */
+      .bot-N-about-top-left-hed {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .bot-N-about-top-left-hed h3 {
+        font-size: 20px;
+        line-height: 1.4;
+      }
+
+      /* About Content Box stack */
+      .about-content-box {
+        flex-direction: column;
+      }
+
+      .about-content-box .left-img,
+      .about-content-box .right-text {
+        flex: 100%;
+      }
+
+      .about-content-box .left-img img {
+        height: auto;
+      }
+
+      /* Project Info stack */
+      .project-info {
+        flex-direction: row;
+        gap: 15px;
+      }
+
+      .project-info div {
+        margin-bottom: 10px;
+      }
+
+      /* Team Avatars center */
+      .team-avatars {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .team-avatars img {
+        margin-left: 0;
+      }
+    }
+
+    /* ✅ Extra small screens */
+    @media (max-width: 480px) {
+      .main-head-about {
+        font-size: 20px;
+      }
+
+      .bot-n-des {
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .project-info h3 {
+        font-size: 22px;
+      }
+
+      .team-avatars .play-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+      }
+    }
+
+    /* other about */
+    .bot-N-about-other-section {
+      background-color: #ffe5e5;
+      color: black;
+      padding: 40px 0;
+    }
+
+    .bot-N-about-other-left-section {
+      padding-right: 30px;
+    }
+
+    .bot-N-about-other-subtitle {
+      font-size: 15px;
+      font-weight: 600;
+      color: #e62e2e;
+      margin-bottom: 10px;
+    }
+
+    .bot-N-about-other-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 25px;
+      line-height: 1.4;
+      color: #3b1d1d;
+      text-align: center;
+    }
+
+    .bot-N-about-other-desc {
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .bot-N-about-other-btn {
+      display: inline-block;
+      padding: 10px 22px;
+      border-radius: 50px;
+      background: #e62e2e;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .bot-N-about-other-btn:hover {
+      background: #c91e1e;
+    }
+
+    .bot-N-about-other-btn i {
+      margin-left: 8px;
+      font-size: 13px;
+    }
+
+    .bot-N-about-other-img {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .bot-N-about-other-img img {
+      width: 100%;
+      border-radius: 30px;
+      display: block;
+    }
+
+    /* Overlay Circle */
+    .bot-N-about-other-img .icon-overlay {
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 22px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+      transition: all 0.3s ease;
+    }
+
+    /* Icon inside circle */
+    .bot-N-about-other-img .icon-overlay i {
+      color: #000 !important;
+      transform: rotate(-1deg);
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    /* Hover effect for circle */
+    .bot-N-about-other-img .icon-overlay:hover {
+      background: #e62e2e;
+      transform: scale(1.1);
+    }
+
+    /* keep icon black even on hover */
+    .bot-N-about-other-img .icon-overlay:hover i {
+      color: #000 !important;
+    }
+
+    /* Timeline */
+    .bot-N-about-other-timeline {
+      margin-top: 60px;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .bot-N-about-other-timeline::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #ccc;
+      z-index: 1;
+    }
+
+    .bot-N-about-other-timeline-item {
+      position: relative;
+      flex: 1;
+      min-width: 120px;
+      z-index: 2;
+      margin-bottom: 30px;
+    }
+
+    .bot-N-about-other-timeline-item .dot {
+      width: 24px;
+      height: 24px;
+      background: #000;
+      border-radius: 50%;
+      display: inline-block;
+      margin-bottom: 10px;
+      border: 3px solid #fff;
+      position: relative;
+      top: 11px;
+    }
+
+    .bot-N-about-other-timeline-item.active .dot {
+      background: #e62e2e;
+    }
+
+    .bot-N-about-other-timeline-item h5 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .bot-N-about-other-timeline-item p {
+      font-size: 13px;
+      margin: 0;
+      color: #272626;
+      font-weight: 700;
+      padding: 0 50px;
+      text-align: center;
+    }
+
+    .bot-N-about-other-heading-about {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .bot-N-about-other-title {
+        font-size: 24px;
+      }
+
+      .bot-N-about-other-left-section {
+        padding-right: 0;
+        text-align: center;
+      }
+
+      .bot-N-about-other-desc {
+        font-size: 15px;
+        padding: 0 10px;
+      }
+
+      .bot-N-about-other-btn {
+        margin-top: 10px;
+      }
+
+      .bot-N-about-other-img {
+        margin-top: 20px;
+      }
+
+      .bot-N-about-other-img .icon-overlay {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+        bottom: 15px;
+        left: 15px;
+      }
+
+      .bot-N-about-other-timeline {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        position: relative;
+      }
+
+      /* vertical line instead of hiding */
+      .bot-N-about-other-timeline::before {
+        display: block;
+        width: 2px;
+        height: 100%;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+      }
+
+      .bot-N-about-other-timeline-item {
+        text-align: center;
+        padding: 0 20px;
+      }
+
+      .bot-N-about-other-timeline-item p {
+        padding: 0;
+      }
+    }
+
+    /* other end about */
+
+    /* ceo css */
+    #bot-N-ceo-topheader {
+      background: #f5f5f5;
+      padding: 60px 0;
+    }
+
+    .bot-N-left-img-wrapper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .bot-N-left-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .bot-N-right-img-wrapper {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .bot-N-right-img-wrapper span {
+      display: block;
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 15px;
+    }
+
+    .bot-N-right-img-wrapper p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .bot-N-right-img-wrapper h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: #e62e2e;
+    }
+
+    .bot-N-right-img-wrapper p:last-of-type {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .bot-n-ceo-btn button {
+      background: #e62e2e;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+    }
+
+    .bot-n-ceo-btn button:hover {
+      background: #c41c1c;
+    }
+
+    /* css ceo */
+  </style>
+</head>
+
+<body>
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white bot-N-navbar">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand bot-N-logo" href="../index.html">
+        <img src="../assets/img/logo.png" alt="BotMedia Logo">
+      </a>
+
+      <!-- Toggle Button for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#botNNavbar"
+        aria-controls="botNNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav Links -->
+      <div class="collapse navbar-collapse" id="botNNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link bot-N-nav-link active" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bot-N-nav-link" href="../about/about.html">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link bot-N-nav-link " href="../allServices/Service.html" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Services</span>
+              <i class="fa-solid fa-angle-down"></i> <!-- Bootstrap icon -->
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../allServices/Service.html">Service 1</a></li>
+              <li><a class="dropdown-item" href="../allServices/Service.html">Service 2</a></li>
+              <li><a class="dropdown-item" href="../allServices/Service.html">Service 3</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bot-N-nav-link" href="#">Portfolio</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link bot-N-nav-link" href="../blog/blog.html">Blog</a>
+          </li>
+        </ul>
+
+        <!-- Buttons -->
+        <div class="d-flex gap-2">
+          <a href="tel:+919158145429" class="bot-N-btn-outline">Contact Us</a>
+          <button href="#" class="bot-N-btn-fill" data-bs-toggle="modal" data-bs-target="#botNModal">GET A
+            FREE QUOTE →</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+  <!-- Header Section -->
+  <section class="bot-N-alll-head">
+    <div class="content">
+      <div class="nav-links">
+        <a href="../index.html"><i class="fas fa-home"></i> Home /</a>
+        <a href="./about.html"> About</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- main about -->
+  <section class="bot-N-aboutmain">
+    <div class="container">
+      <!-- Title -->
+      <div class="row mb-5">
+        <div class="col-md-4 col-12">
+          <div class="bot-N-about-top-left-hed">
+            <img src="../assets/img/common-hed-d.svg" alt="" height="24px">
+            <span class="">About Us</span>
+            <h3>Your Vision, Our Strategy – <br> Together We Lead the <span class="main-head-about">Digital
+                Future</span></h3>
+          </div>
+        </div>
+        <div class="col-md-8 col-12">
+          <div class="row g-3">
+            <div class="col-6">
+              <img src="../assets/img/why3.jpg" alt="" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-6">
+              <img src="../assets/img/why3.jpg" alt="" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Content -->
+      <div class="about-content-box">
+        <div class="left-img">
+          <img src="../assets/img/why1.jpg" alt="" class="img-fluid rounded shadow h-100 w-100 object-fit-cover">
+        </div>
+        <div class="right-text ps-3">
+          <h3 class="mb-3">Empowering brands with cutting-edge marketing solutions that drive visibility,
+            engagement, and measurable growth.</h3>
+          <p class="bot-n-des">
+            At <span>Bot Media Digital</span>, we help brands get noticed, generate quality leads, and
+            dominate their market. With <span>10k+ projects, 15k+ happy clients</span>, and over a
+            <span>decade of
+              expertise</span>, we combine innovation, strategy, and technology to deliver measurable
+            results.
+          </p>
+          <div class="bot-n-head-about">
+            <div class="icon">
+              <i class="fa-solid fa-diamond"></i>
+            </div>
+            <div class="content">
+              <h5>End-to-End Marketing Expertise</h5>
+              <p>From brand awareness to high-converting campaigns.</p>
+            </div>
+          </div>
+
+          <!-- Project Info -->
+          <div class="project-info">
+            <div>
+              <h3>10,000+</h3>
+              <p>Projects Delivered</p>
+            </div>
+            <span><img src="../assets/img/about-iocn.svg" alt="" height="40px"></span>
+            <div>
+              <h3>15,000+</h3>
+              <p> Happy Clients</p>
+            </div>
+            <span><img src="../assets/img/about-iocn.svg" alt="" height="40px"></span>
+
+            <div>
+              <h3>45+</h3>
+              <p>Global Awards</p>
+            </div>
+          </div>
+
+          <!-- Team Avatars -->
+          <div class="team-avatars">
+            <img src="../assets/img/hero-small-img1.png" alt="Team">
+            <img src="../assets/img/hero-small-img2.png" alt="Team">
+            <img src="../assets/img/hero-small-img3.png" alt="Team">
+            <div class="play-btn">▶</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end main about -->
+
+  <!-- other about -->
+  <section class="bot-N-about-other-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 bot-N-about-other-heading-about">
+          <p class="bot-N-about-other-subtitle">
+            <img src="../assets/img/common-hed-d.svg" alt="" height="24px"> Our History
+          </p>
+          <h2 class="bot-N-about-other-title">
+            Your Gateway to Online Excellence – Turning <br><span style="color:#e62e2e;">Ideas into Impact</span>
+          </h2>
+        </div>
+        <div class="col-lg-5 col-md-12">
+          <div class="bot-N-about-other-left-section">
+            <p class="bot-N-about-other-desc">
+              <b>Building brands, driving growth, and delivering measurable success since 2000.</b>
+            </p>
+            <p class="bot-N-about-other-desc">
+              For over 20 years, Bot Media Digital has been helping businesses dream bigger and achieve more.
+              Since our start in 2000, we’ve grown into a global leader in <b>SEO, PPC, social media marketing,
+                branding, and content strategy.</b>
+            </p>
+            <p class="bot-N-about-other-desc">
+              We craft strategies that connect, convert, and build lasting loyalty. With
+              <b>10,000+ projects, 45+ global awards, and a team of creative, data-driven experts</b>,
+              we turn visions into success stories — one pixel at a time.
+            </p>
+            <a href="#" class="bot-N-about-other-btn">
+              Know More <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-12">
+          <div class="bot-N-about-other-img">
+            <img src="../assets/img/why3.jpg" alt="About History">
+            <div class="icon-overlay">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="bot-N-about-other-timeline mt-5">
+        <div class="bot-N-about-other-timeline-item active">
+          <span class="dot"></span>
+          <h5>2000</h5>
+          <p>Foundation & first client success</p>
+        </div>
+        <div class="bot-N-about-other-timeline-item">
+          <span class="dot"></span>
+          <h5>2005</h5>
+          <p>Full-service digital marketing launch</p>
+        </div>
+        <div class="bot-N-about-other-timeline-item">
+          <span class="dot"></span>
+          <h5>2010</h5>
+          <p>5,000+ projects milestone</p>
+        </div>
+        <div class="bot-N-about-other-timeline-item">
+          <span class="dot"></span>
+          <h5>2018</h5>
+          <p>International award recognition</p>
+        </div>
+        <div class="bot-N-about-other-timeline-item">
+          <span class="dot"></span>
+          <h5>2023</h5>
+          <p>Leading innovative global campaigns</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!--  other about end -->
+  <!-- ceo start -->
+  <div id="bot-N-ceo-topheader">
+    <div class="container">
+      <div class="row align-items-stretch">
+        <!-- Left Side -->
+        <div class="col-md-6 d-flex">
+          <div class="bot-N-left-img-wrapper w-100">
+            <img src="../assets/img/ceo-img.png" alt="ceo img">
+          </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="col-md-6 d-flex">
+          <div class="bot-N-right-img-wrapper w-100">
+            <span><i>Bot Media Digital on Driving Business Growth</i></span>
+            <p>At Bot Media Digital, our mission has always been to empower businesses with impactful
+              digital strategies. By blending creativity, data, and technology, we’ve been able to
+              help clients generate high-quality leads, boost their online presence, and achieve
+              measurable results faster than ever before.</p>
+            <h3>Rahul Kumar</h3>
+            <p>Co-Founder & Digital Strategist</p>
+            <p>Bot Media Digital</p>
+            <div class="bot-n-ceo-btn">
+              <button>Read the Story</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ceo start end -->
+
+  <!-- footer start -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <!-- Logo & About -->
+        <div class="col-md-3 mb-4">
+          <img src="../assets/img/logo.png" alt="Logo" class="mb-3">
+          <p>Creative digital solutions to grow your brand and achieve lasting success.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-2 mb-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">« About Us</a></li>
+            <li><a href="#">« Portfolio</a></li>
+            <li><a href="#">« Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-md-2 mb-4">
+          <h5>Our Services</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">« Web Development</a></li>
+            <li><a href="#">« Aerial Photography</a></li>
+            <li><a href="#">« Digital Marketing</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="col-md-2 mb-4">
+          <h5>Support</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">« Terms & Conditions</a></li>
+            <li><a href="#">« Privacy Policy</a></li>
+            <li><a href="#">« Return Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="col-md-3 mb-4">
+          <h5>Get In Touch</h5>
+          <form class="d-flex email-box">
+            <input type="email" placeholder="Input your email">
+            <button type="submit">Send</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Bottom Text -->
+      <div class="bottom-text">
+        Privacy And Cookie Policy || Terms And Conditions || Legal Notice || Created By Nitu
+      </div>
+    </div>
+  </footer>
+  <!-- foooter end -->
+  <!-- mobile nav bar -->
+  <!-- Mobile Bottom Navbar -->
+  <div class="mobile-bottom-nav">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/919158145429" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+      WhatsApp
+    </a>
+
+    <!-- Contact (Call) -->
+    <a href="tel:+919158145429">
+      <i class="fas fa-phone"></i>
+      Call
+    </a>
+
+    <!-- Get Quote -->
+    <a href="#" data-bs-toggle="modal" data-bs-target="#botNModal">
+      <i class="fas fa-file-signature"></i>
+      Get Quote
+    </a>
+  </div>
+  <!-- Get Quote Modal -->
+  <!-- Modal -->
+  <div class="modal fade bot-N-model" id="botNModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Global Close Button -->
+        <button type="button" class="btn-close global-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close step-close close-btn-bot" data-bs-dismiss="modal"></button>
+
+        <!-- Progress Steps -->
+        <div class="progress-steps">
+          <div class="step-circle active">1</div>
+          <div class="line"></div>
+          <div class="step-circle">2</div>
+          <div class="line"></div>
+          <div class="step-circle">3</div>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="modal-body step step-1 active">
+          <h5>What do you need?</h5>
+          <div class="options">
+            <label class="option-btn"><input type="checkbox" class="d-none required-field"> Digital
+              Marketing</label>
+            <label class="option-btn"><input type="checkbox" class="d-none required-field"> Product
+              Shoot</label>
+            <label class="option-btn"><input type="checkbox" class="d-none required-field"> Drone
+              Videography</label>
+            <label class="option-btn"><input type="checkbox" class="d-none required-field"> Website
+              Development</label>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="modal-body step step-2">
+          <h5>Tell us about your goals.</h5>
+          <p>WE’RE ALWAYS UP FOR A CHALLENGE</p>
+          <textarea class="form-control required-field nk-bot-pop-text" rows="4" placeholder="Type here..."
+            required></textarea>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="modal-body step step-3">
+          <h5 style="color:#e60000; font-weight:700;">Tell Us about you.</h5>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" class="form-control required-field nk-bot-pop-text" placeholder="First Name*"
+                data-type="name" required>
+              <div class="error-text d-none">Please enter a valid first name (letters only).</div>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control required-field nk-bot-pop-text" placeholder="Last Name*"
+                data-type="name" required>
+              <div class="error-text d-none">Please enter a valid last name (letters only).</div>
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control required-field nk-bot-pop-text" placeholder="Business Email*"
+                data-type="email" required>
+              <div class="error-text d-none">Enter a valid email (e.g. test@example.com).</div>
+            </div>
+            <div class="col-md-6">
+              <input type="tel" class="form-control required-field nk-bot-pop-text" placeholder="Phone Number*"
+                data-type="phone" required>
+              <div class="error-text d-none">Enter a valid phone number (10+ digits).</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button class="btn-back"><i class="fa-solid fa-arrow-left"></i> Back</button>
+          <button class="btn-next">Next <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap JS -->
+  <script src="../assets/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
