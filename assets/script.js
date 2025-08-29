@@ -122,7 +122,8 @@ nextBtn.addEventListener("click", () => {
     } else {
         const modal = bootstrap.Modal.getInstance(document.getElementById('botNModal'));
         modal.hide();
-        window.location.href = "thanku.html"; // redirect
+        // ✅ Correct relative redirect
+        window.location.href = "./blog/thanku.html";
     }
 });
 
