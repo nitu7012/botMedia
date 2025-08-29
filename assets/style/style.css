@@ -30,7 +30,7 @@ html {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     width: 100%;
-
+    padding: 0 10px;
 }
 
 /* Navbar */
@@ -426,7 +426,35 @@ html {
     .bot-N-hero p {
         font-size: 0.95rem;
     }
-
+    .bot-N-leadgenreate-tag{
+        padding: 8px 8px !important;
+        font-size: 12px !important;
+    }
+    .bot-N-leadgenreate-card-body{
+        padding: 0 !important;
+    }
+    .bot-N-leadgenreate-viewall{
+         padding: 8px 8px !important;
+        font-size: 12px !important;
+    }
+    .bot-N-top-head h4{
+        font-size: 24px !important;
+    }
+    .bot-n-ourwork-viewall{
+        font-size: 12px !important;
+    }
+    .bot-N-blog{
+        padding: 0 !important;
+    }
+    .bot-N-aboutmain{
+        padding: 0 !important;
+    }
+    .top-right-serv-img-wrapper{
+        display: none !important;
+    }
+    .bot-N-blog-card{
+        margin-top: 10px !important;
+    }
 }
 
 
@@ -576,6 +604,9 @@ html {
 
     .bot-N-hero {
         margin-top: 2rem;
+    }
+    .bot-N-testmonila{
+        padding: 10px !important;
     }
 }
 
