@@ -809,6 +809,7 @@ html {
     padding: 25px 25px;
     border-radius: 12px;
     position: relative;
+    height: 270px;
 }
 
 .bot-n-why-card.dark {
@@ -837,13 +838,13 @@ html {
 }
 
 .bot-n-why-card h4 {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .bot-n-why-card p {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.6;
     margin-bottom: 0;
 }
@@ -1961,3 +1962,159 @@ html {
     font-weight: 700;
     margin-bottom: 0 !important;
 }
+
+/* ============= pricing section================ */
+ section.bot-N-price-section {
+      padding: 40px 0;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      background-color:#f6f6f6;
+      border-radius: 12px;
+      margin-top: 4rem;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    }
+
+    section.bot-N-price-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #1b1b1b;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+
+    section.bot-N-price-section p {
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      color: #1b1b1b;
+    }
+
+    /* Pricing Cards */
+    .bot-N-price-card {
+      background: #fff;
+      text-align: center;
+      padding: 2em 1.5em;
+      border-radius: 0.625rem;
+      position: relative;
+      cursor: pointer;
+      height: 100%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: all 0.4s ease-in-out;
+    }
+
+    .bot-N-price-card li {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+      transition: color 0.4s ease-in-out;
+    }
+
+    .bot-N-price-ribbon {
+      position: absolute;
+      width: 2.5rem;
+      height: 6.875rem;
+      background: #b62828;
+      top: -0.625rem;
+      left: 1.563rem;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: all 0.4s ease-in-out;
+    }
+
+    .bot-N-price-ribbon>div {
+      transform: rotate(-90deg);
+      color: #fff;
+      font-weight: bold;
+      margin-top: 0.625rem;
+    }
+
+    .bot-N-price-card hr {
+      width: 35%;
+      margin: 1.5rem auto;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .bot-N-price-card hr.first {
+      background: #d6d4d3;
+      height: 0.156rem;
+      border: none;
+    }
+
+    .bot-N-price-card hr.second {
+      background: #1b1b1b;
+      height: 0.25rem;
+      border: none;
+    }
+
+    .bot-N-price-card h3 {
+      color: #1b1b1b;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+      transition: color 0.4s ease-in-out;
+    }
+
+    .bot-N-price-card .bot-N-price {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #1b1b1b;
+      margin: 1rem 0;
+      transition: color 0.4s ease-in-out;
+    }
+
+    .bot-N-price-card .bot-N-price span {
+      font-size: 1rem;
+      margin-right: 0.3rem;
+      transition: color 0.4s ease-in-out;
+    }
+
+    .bot-N-price-btn {
+      background: #d6d4d3;
+      color: #1b1b1b;
+      font-weight: bold;
+      font-size: 0.85rem;
+      padding: 0.5rem 1.5rem;
+      display: inline-block;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease-in-out;
+      border-radius: 4px;
+    }
+
+    /* Hover Effect Instead of JS */
+    .bot-N-price-card:hover {
+      background: #1b1b1b;
+      color: #a3a3a3;
+      transform: translateY(-8px);
+    }
+
+    .bot-N-price-card:hover li {
+      font-size: 1rem;
+    }
+
+    .bot-N-price-card:hover .bot-N-price-ribbon {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .bot-N-price-card:hover h3 {
+      color: #d6d4d3;
+    }
+
+    .bot-N-price-card:hover .bot-N-price {
+      color: #fff;
+    }
+
+    .bot-N-price-card:hover .bot-N-price span {
+      color: #d6d4d3;
+    }
+
+    .bot-N-price-card:hover .bot-N-price-btn {
+      background: #d6d4d3;
+      color: #1b1b1b;
+      opacity: 1;
+      visibility: visible;
+      margin-top: 1rem;
+    }
