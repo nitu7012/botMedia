@@ -35,6 +35,10 @@ html {
 
 /* Navbar */
 .bot-N-navbar {
+  width: 100%;
+  z-index: 1050; /* always on top */
+}
+.bot-N-navbar {
     padding: 10px 0;
     border-bottom: 1px solid #eee;
 }
@@ -348,7 +352,9 @@ html {
     flex-direction: row;
     padding-left: 20px;
 }
-
+.bot-N-hero{
+    margin-top: 4rem;
+}
 .bot-N-hero-bottom-icons img {
 
     border-radius: 50px;
@@ -361,7 +367,7 @@ html {
     position: relative;
     z-index: 1;
     background-color: white;
-    margin-left: -16px;
+    margin-left: -10px;
     color: var(--bot-N-primary);
 }
 
@@ -574,7 +580,7 @@ html {
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 2px;
 }
 
 .learn-more:hover {
@@ -583,7 +589,7 @@ html {
 
 .card-body-blog {
     padding: 10px;
-    height: 184px;
+    height: 200px;
 }
 
 @media (max-width: 768px) {
@@ -831,13 +837,13 @@ html {
 }
 
 .bot-n-why-card h4 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .bot-n-why-card p {
-    font-size: 15px;
+    font-size: 12px;
     line-height: 1.6;
     margin-bottom: 0;
 }
@@ -953,6 +959,7 @@ html {
     max-height: 100px;
     margin: auto;
     transition: transform 0.3s ease;
+    height: 180px;
 }
 
 .bot-N-partner .item img:hover {
@@ -1098,11 +1105,13 @@ html {
     font-weight: 700;
     margin-bottom: 20px;
     color: #5a0e0e;
+    font-size: 16px;
 }
 
 .footer a {
     text-decoration: none;
     color: #3d0c0c;
+    font-size: 12px;
 }
 
 .footer a:hover {
@@ -1287,7 +1296,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 400px;
+    gap: 100px;
 }
 
 .bot-N-test-top-head {
@@ -1576,7 +1585,7 @@ html {
     border-radius: 8px;
     font-size: 13px;
     font-weight: 500;
-    margin-top: -15px;
+   
 }
 
 .bot-N-leadgenreate-card-body {

@@ -37,28 +37,27 @@
       <div class="collapse navbar-collapse" id="botNNavbar">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link bot-N-nav-link active" href="./index.html">Home</a>
+            <a class="nav-link bot-N-nav-link active" id="Home" href="./index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link bot-N-nav-link" href="./about/about.html">About</a>
+            <a class="nav-link bot-N-nav-link" id="About" href="./about/about.html">About</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link bot-N-nav-link " href="./allServices/Service.html" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
+              data-bs-toggle="dropdown" aria-expanded="false" id="Services">
               <span>Services</span>
               <i class="fa-solid fa-angle-down"></i> <!-- Bootstrap icon -->
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="./allServices/Service.html">Service 1</a></li>
-              <li><a class="dropdown-item" href="./allServices/Service.html">Service 2</a></li>
-              <li><a class="dropdown-item" href="./allServices/Service.html">Service 3</a></li>
+
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link bot-N-nav-link" href="#porfolio">Portfolio</a>
+            <a class="nav-link bot-N-nav-link" id="Porfolio" href="./aallPorfolio/Porfolio.html">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link bot-N-nav-link" href="./blog/blog.html">Blog</a>
+            <a class="nav-link bot-N-nav-link" id="Blog" href="./blog/blog.html">Blog</a>
           </li>
         </ul>
 
@@ -165,7 +164,7 @@
   </section>
   <!-- hero end -->
   <!-- ==================Blog section ================= -->
-  <section class="bot-N-blog">
+  <section class="bot-N-blog" id="Blog">
     <div class="container">
 
       <!-- Heading + Button Row -->
@@ -258,7 +257,7 @@
   <!-- ================== endBlog section ================= -->
 
   <!--================ service section  -->
-  <section class="bot-N-service">
+  <section class="bot-N-service" id="Service">
     <img src="./assets/img/top-desing.svg" alt="" style="width: 100%;">
     <div class="container py-5">
 
@@ -417,6 +416,7 @@
       <div class="text-start">
         <h6><img src="./assets/img/common-hed-d.svg" alt="" height="20px"> Trusted By</h6>
         <h2>Standing Strong with Our Partners</h2>
+      
       </div>
 
       <!-- Custom Nav buttons -->
@@ -428,12 +428,13 @@
 
     <!-- Carousel -->
     <div class="owl-carousel bot-N-partner owl-theme">
-      <div class="item"><img src="./assets/img/brand-1.png" alt="Partner 1"></div>
-      <div class="item"><img src="./assets/img/brand-2.png" alt="Partner 2"></div>
-      <div class="item"><img src="./assets/img/brand-3.png" alt="Partner 3"></div>
-      <div class="item"><img src="./assets/img/brand-4.png" alt="Partner 4"></div>
-      <div class="item"><img src="./assets/img/brand-5.png" alt="Partner 5"></div>
-      <div class="item"><img src="./assets/img/brand-6.png" alt="Partner 6"></div>
+      <div class="item"><img src="./assets/img/ladha-partner.png" alt="Partner 1"></div>
+      <div class="item"><img src="./assets/img/shapoori-parter.png" alt="Partner 2"></div>
+      <div class="item"><img src="./assets/img/vilas-part.png" alt="Partner 3"></div>
+      <div class="item"><img src="./assets/img/danube-logo.png" alt="Partner 4"></div>
+      <div class="item"><img src="./assets/img/damacc-logo.png" alt="Partner 5"></div>
+      <div class="item"><img src="./assets/img/b&w logo-des.jpeg" alt="Partner 6"></div>
+      <div class="item"><img src="./assets/img/emmar-logo.png" alt="Partner 6"></div>
     </div>
   </div>
   <!-- end trusted parten -->
@@ -470,8 +471,7 @@
               <span class="bot-n-ourwork-tag">Web Development</span>
               <div class="bot-n-ourwork-footer">
                 <div class="bot-n-ourwork-desc">Real Estate Listing Website</div>
-                <a href="https://www.botmediadigital.com/portfolio/real-estate-listing" target="_blank"
-                  class="bot-n-ourwork-arrow">
+                <a href="https://estate-bot-dubai.vercel.app" target="_blank" class="bot-n-ourwork-arrow">
                   <i class="fas fa-arrow-up-right-from-square"></i>
                 </a>
               </div>
@@ -489,8 +489,7 @@
               <span class="bot-n-ourwork-tag">Social Media Marketing</span>
               <div class="bot-n-ourwork-footer">
                 <div class="bot-n-ourwork-desc">Lead Gen Campaign for Builders</div>
-                <a href="https://www.botmediadigital.com/portfolio/lead-gen-campaign" target="_blank"
-                  class="bot-n-ourwork-arrow">
+                <a href="https://wcard.io" target="_blank" class="bot-n-ourwork-arrow">
                   <i class="fas fa-arrow-up-right-from-square"></i>
                 </a>
               </div>
@@ -694,8 +693,8 @@
           Testimonials
         </h4>
         <div class="bot-N-testmonila-head">
-          <h3>Testimonials: Trusted <br> by Our Clients</h3>
-          <p class="section-subtitle">Hear from the clients who have experienced our <br> commitment, creativity, and
+          <h3>Testimonials: Trusted by Our Clients</h3>
+          <p class="section-subtitle">Hear from the clients who have experienced our commitment, creativity, and
             results
             firsthand.</p>
         </div>
@@ -768,7 +767,6 @@
     </div>
   </section>
   <!-- testmonila end -->
-
   <!-- faq start -->
 
   <!-- faq end -->
@@ -835,9 +833,18 @@
           <img src="./assets/img/logo.png" alt="Logo" class="mb-3">
           <p>Creative digital solutions to grow your brand and achieve lasting success.</p>
           <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.facebook.com/Botmediadigitalmarketing"><i class="fab fa-facebook-f"></i></a>
+            <a href="instagram.com/botmediadigital?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
+                class="fab fa-instagram"></i></a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/company/botmediadigitalmarketing/?viewAsMember=true" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/@Botmediavblogs" target="_blank">
+              <i class="fab fa-youtube"></i>
+            </a>
+
           </div>
         </div>
 
@@ -845,9 +852,10 @@
         <div class="col-md-2 mb-4">
           <h5>Quick Links</h5>
           <ul class="list-unstyled">
-            <li><a href="#">« About Us</a></li>
-            <li><a href="#">« Portfolio</a></li>
-            <li><a href="#">« Contact</a></li>
+            <li><a href="./about/about.html">« About Us</a></li>
+            <li><a href="./aallPorfolio/Porfolio.html">« Portfolio</a></li>
+            <li><a href="./contactus/contact-us.html">« Contact</a></li>
+            <li><a href="./blog/blog.html">« Blog</a></li>
           </ul>
         </div>
 
@@ -855,9 +863,9 @@
         <div class="col-md-2 mb-4">
           <h5>Our Services</h5>
           <ul class="list-unstyled">
-            <li><a href="#">« Web Development</a></li>
-            <li><a href="#">« Aerial Photography</a></li>
-            <li><a href="#">« Digital Marketing</a></li>
+            <li><a href="./allServices/Service.html">« Web Development</a></li>
+            <li><a href="./allServices/Service.html">« Aerial Photography</a></li>
+            <li><a href="./allServices/Service.html">« Digital Marketing</a></li>
           </ul>
         </div>
 

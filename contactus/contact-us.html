@@ -18,7 +18,7 @@
         }
 
         .top-serv-n-hero {
-            padding: 0 30px;
+            padding: 20px 30px;
             background: linear-gradient(135deg, #ea9693, #3403032b);
             border-radius: 15px;
         }
@@ -26,8 +26,8 @@
         /* ===== Contact Section Wrapper ===== */
         .bot-top-contract-N {
             padding: 20px 0;
-            background: #f9f9f9;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
+            margin-top: 8rem;
         }
 
         .bot-top-contract-N-left {
@@ -333,59 +333,57 @@
 </head>
 
 <body>
-     <!-- Navbar Start -->
-  <nav class="navbar navbar-expand-lg bg-white bot-N-navbar">
-    <div class="container">
-      <!-- Logo -->
-      <a class="navbar-brand bot-N-logo" href="../index.html">
-        <img src="../assets/img/logo.png" alt="BotMedia Logo">
-      </a>
-
-      <!-- Toggle Button for Mobile -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#botNNavbar"
-        aria-controls="botNNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Nav Links -->
-      <div class="collapse navbar-collapse" id="botNNavbar">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link bot-N-nav-link active" href="../index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link bot-N-nav-link" href="../about/about.html">About</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link bot-N-nav-link " href="../allServices/Service.html" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              <span>Services</span>
-              <i class="fa-solid fa-angle-down"></i> <!-- Bootstrap icon -->
+    <nav class="navbar navbar-expand-lg bg-white bot-N-navbar fixed-top shadow-sm">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand bot-N-logo" href="./index.html">
+                <img src="../assets/img/logo.png" alt="BotMedia Logo">
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="../allServices/Service.html">Service 1</a></li>
-              <li><a class="dropdown-item" href="../allServices/Service.html">Service 2</a></li>
-              <li><a class="dropdown-item" href="../allServices/Service.html">Service 3</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link bot-N-nav-link" href="#">Portfolio</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link bot-N-nav-link" href="../blog/blog.html">Blog</a>
-          </li>
-        </ul>
 
-        <!-- Buttons -->
-        <div class="d-flex gap-2">
-          <a href="tel:+919158145429" class="bot-N-btn-outline">Contact Us</a>
-          <button href="#" class="bot-N-btn-fill" data-bs-toggle="modal" data-bs-target="#botNModal">GET A
-            FREE QUOTE →</button>
+            <!-- Toggle Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#botNNavbar"
+                aria-controls="botNNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Nav Links -->
+            <div class="collapse navbar-collapse" id="botNNavbar">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link bot-N-nav-link active" id="Home" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bot-N-nav-link" id="About" href="./about/about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link bot-N-nav-link dropdown-toggle" href="./allServices/Service.html"
+                            id="Services" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./allServices/Service.html">Service 1</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bot-N-nav-link" id="Portfolio"
+                            href="./aallPorfolio/Porfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bot-N-nav-link" id="Blog" href="./blog/blog.html">Blog</a>
+                    </li>
+                </ul>
+
+                <!-- Buttons -->
+                <div class="d-flex gap-2">
+                    <a href="tel:+919158145429" class="bot-N-btn-outline">Contact Us</a>
+                    <button class="bot-N-btn-fill" data-bs-toggle="modal" data-bs-target="#botNModal">
+                        GET A FREE QUOTE →
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </nav>
-  <!-- Navbar End -->
+    </nav>
+
     <!-- Contact Section -->
     <section class="bot-top-contract-N">
         <div class="container">
@@ -397,7 +395,7 @@
                         <p>Our team is here to bring your digital vision to life. Whether it's web design, SEO, or
                             marketing —
                             we’ve got you covered with result-driven strategies.</p>
-                        <button class="btn-main">
+                        <button class="btn-main" data-bs-toggle="modal" data-bs-target="#botNModal">
                             Get in Touch <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
@@ -513,9 +511,21 @@
                     <img src="../assets/img/logo.png" alt="Logo" class="mb-3">
                     <p>Creative digital solutions to grow your brand and achieve lasting success.</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/Botmediadigitalmarketing"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a
+                            href="instagram.com/botmediadigital?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
+                                class="fab fa-instagram"></i></a>
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/company/botmediadigitalmarketing/?viewAsMember=true"
+                            target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/@Botmediavblogs" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+
                     </div>
                 </div>
 
@@ -523,9 +533,10 @@
                 <div class="col-md-2 mb-4">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">« About Us</a></li>
-                        <li><a href="#">« Portfolio</a></li>
-                        <li><a href="#">« Contact</a></li>
+                        <li><a href="../about/about.html">« About Us</a></li>
+                        <li><a href="../aallPorfolio/Porfolio.html">« Portfolio</a></li>
+                        <li><a href="./contact-us.html">« Contact</a></li>
+                        <li><a href="../blog/blog.html">« Blog</a></li>
                     </ul>
                 </div>
 
@@ -533,11 +544,12 @@
                 <div class="col-md-2 mb-4">
                     <h5>Our Services</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">« Web Development</a></li>
-                        <li><a href="#">« Aerial Photography</a></li>
-                        <li><a href="#">« Digital Marketing</a></li>
+                        <li><a href="../allServices/Service.html">« Web Development</a></li>
+                        <li><a href="../allServices/Service.html">« Aerial Photography</a></li>
+                        <li><a href="../allServices/Service.html">« Digital Marketing</a></li>
                     </ul>
                 </div>
+
 
                 <!-- Support -->
                 <div class="col-md-2 mb-4">
@@ -671,12 +683,12 @@
     <!-- screp file -->
     <script src="../assets/script.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- jQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <!-- OwlCarousel JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
- 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- OwlCarousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 </body>
 
 </html>
